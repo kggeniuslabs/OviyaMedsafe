@@ -1,0 +1,54 @@
+
+
+.custom-link {
+  position: relative;
+  text-decoration: none;
+  font-size: 15px;
+  color: white;
+  font-weight: 500;
+  transition: color 0.3s ease-in-out;
+}
+
+.custom-link:hover {
+  color: white;
+}
+
+.custom-link::after {
+  content: '';
+  position: absolute;
+  left: 50%;
+  bottom: -5px;
+  width: 0;
+  height: 2px;
+  background-color: white;
+  transition: all 0.3s ease-in-out;
+  transform: translateX(-50%);
+}
+
+.custom-link:hover::after {
+  width: 50%;
+}
+
+.custom-link.active::after {
+  width: 50%;
+  height: 2px;
+  background-color: white;
+}
+
+.dropdown-item.active {
+  font-weight: 500;
+  background-color: #dbffd5;
+  color: black;
+}
+
+.dropdown-item:hover{
+  background-color: #dbffd5;
+}
+
+.custom-link2{
+  text-decoration: none;
+}
+
+.imlogo{
+  height: 10px !important;
+}

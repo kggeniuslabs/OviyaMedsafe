@@ -1,0 +1,93 @@
+/* Tablet.css */
+
+
+  
+  .bgpart {
+    position: relative;
+    width: 400px;
+    height: 400px;
+    background-image: url('../assets/molecules.png'); /* Add your background image here */
+    background-size: cover;
+    background-position: center;
+    animation: zoomInOut 4s ease-in-out infinite; /* Zooming effect */
+  }
+  
+  .movingtablet{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .movingtablet2 {
+    position: absolute;
+    top: 20%;
+    right: -1%;
+    transform: translateY(-50%);
+    
+  }
+  
+  .movingtablet img, .movingtablet2 img {
+    width: 200px; /* Adjust the image size as needed */
+    animation-duration: 4s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+  }
+  
+  .movingtablet img {
+    animation-name: moveUpDown;
+  }
+  
+  .movingtablet2 img {
+    animation-name: moveDownUp;
+  }
+  
+  @keyframes moveUpDown {
+    0% {
+      transform: translateY(0);
+    }
+    25% {
+      transform: translateY(-50px);
+    }
+    50% {
+      transform: translateY(-50px);
+    }
+    75% {
+      transform: translateY(0);
+    }
+    100% {
+      transform: translateY(0);
+    }
+  }
+  
+  @keyframes moveDownUp {
+    0% {
+      transform: translateY(0);
+    }
+    25% {
+      transform: translateY(50px);
+    }
+    50% {
+      transform: translateY(50px);
+    }
+    75% {
+      transform: translateY(0);
+    }
+    100% {
+      transform: translateY(0);
+    }
+  }
+  
+  @keyframes zoomInOut {
+    0% {
+      transform: scale(1); 
+    }
+    50% {
+      transform: scale(1.1); 
+    }
+    100% {
+      transform: scale(1); 
+    }
+  }
+  
