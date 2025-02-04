@@ -47,7 +47,7 @@ function Login() {
       return;
     }                                                                                                                                                                                                                           
 
-    axios.post('http://160.153.172.25:5000/api/auth/login', {
+    axios.post('https://oviyamedsafe.com/api/auth/login', {
       email,
       password,
     }).then(response => {

@@ -38,7 +38,7 @@ function ForgotPassword() {
     }
 
     try {
-      const response = await axios.patch('http://160.153.172.25:5000/api/auth/update-password', {
+      const response = await axios.patch('https://oviyamedsafe.com/api/auth/update-password', {
         email,
         newPassword, // Correctly send the new password
       });

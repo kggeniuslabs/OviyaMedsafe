@@ -2,7 +2,7 @@ import React, { useState, useRef, useEffect } from 'react';
 import date from '../assets/Calendar.png';
 import "./Downloads.css";
 import DownloadForm from './DownloadForm';
-import { Helmet } from 'react-helmet';
+import { Helmet } from 'react-helmet-async';
 
 const Downloads = () => {
   const [activeIndex, setActiveIndex] = useState(null);
@@ -23,6 +23,10 @@ const Downloads = () => {
         <meta name="description" content="Access a variety of Pharmacovigilance resources and publications by Oviya MedSafe, offering insights into drug safety practices and regulatory compliance." />
         <meta name="keywords" content="downloads, Oviya MedSafe resources, Pharmacovigilance publications, drug safety insights, regulatory compliance materials" />
         <link rel="canonical" href="https://www.oviyamedsafe.com/downloads" />
+        <meta property="og:title" content="Pharmacovigilance Resources | Download Oviya MedSafe’s Expert Insights" />
+        <meta property="og:image" content="https://www.oviyamedsafe.com/mainlogo.png" />
+        <meta property="og:url" content="https://www.oviyamedsafe.com/" />
+        <meta property="og:type" content="website" />
       </Helmet>
       <div className='col mx-1 mx-md-5'>
         <h1 className='subhead2 py-4'>Downloads</h1>
@@ -84,7 +88,7 @@ const Downloads = () => {
               <div className='d-flex align-items-center justify-content-between'>
                 <div className='width-heading'>
                   <h5 className="card-title text-left">
-                  Oviya MedSafe - Capabilities & Track Record - 09 OCT 2024
+                    Oviya MedSafe - Capabilities & Track Record - 09 OCT 2024
                   </h5>
                 </div>
                 <div>

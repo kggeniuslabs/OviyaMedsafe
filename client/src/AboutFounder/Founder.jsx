@@ -3,7 +3,7 @@ import founderimg from "../assets/Founderoviya.png";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faLinkedin } from '@fortawesome/free-brands-svg-icons';
 import "./Founder.css";
-import { Helmet } from 'react-helmet';
+import { Helmet } from 'react-helmet-async';
 
 function Founder() {
   return (
@@ -14,6 +14,10 @@ function Founder() {
                     <meta name="description" content="Discover the story behind our founder Dr J Vijay Venkatraman who is a Diabetologist, Drug Safety Physician and Entrepreneur, with 2 decades of experience.  Understand his vision for Oviya MedSafe and his commitment to advancing healthcare safety." />
                     <meta name="keywords" content="Oviya Medsafe Founder, Healthcare Leadership, Medical Data Protection, Founder Story, Healthcare Innovation, Visionary Leadership, Oviya Medsafe Team." />
                     <link rel="canonical" href="https://www.oviyamedsafe.com/our-founder" />
+                    <meta property="og:title" content="Founder of Oviya Medsafe | Visionary Leadership in Healthcare Safety" />
+                    <meta property="og:image" content="https://www.oviyamedsafe.com/mainlogo.png" />
+                    <meta property="og:url" content="https://www.oviyamedsafe.com/" />
+                    <meta property="og:type" content="website" />
                   </Helmet>
       <h1 className='py-2 subhead2'>Our Founder</h1>
       <div className="row align-items-center mx-1 mx-lg-5">

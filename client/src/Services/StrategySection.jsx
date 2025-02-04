@@ -1,5 +1,5 @@
 import { strategyData } from '../utils/services/accordianData';
-import './services.css'
+import './Services.css'
 
 const StrategySection = () => {
   return (

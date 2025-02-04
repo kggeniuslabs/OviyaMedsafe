@@ -18,25 +18,25 @@ function Contactpart() {
         <div className='col-md-4'>
           <div className='d-flex gap-4'>
             <div>
-              <Link to='https://x.com/OviyaMedSafe'>
+              <Link to='https://x.com/OviyaMedSafe' target='_blank'>
                 <img src={TWT} alt='logo' className='me-1' style={{width: '16px'}} />
               </Link>
             </div>
 
             <div >
-              <Link to='https://www.facebook.com/OviyaMedSafe'>
+              <Link to='https://www.facebook.com/OviyaMedSafe' target='_blank'>
                 <img src={FB} alt='logo' className='mx-1'  style={{width: '20px'}}/>
               </Link>
             </div>
 
             <div >
-              <Link to='https://www.youtube.com/channel/UCJMIsvtEWEP0NwUalnRgODQ/videos'>
+              <Link to='https://www.youtube.com/channel/UCJMIsvtEWEP0NwUalnRgODQ/videos' target='_blank'>
                 <img src={YT} alt='logo' className='mx-1' style={{width: '22px'}} />
               </Link>
             </div>
 
             <div>
-              <Link to='https://www.linkedin.com/company/oviya-medsafe/'>
+              <Link to='https://www.linkedin.com/company/oviya-medsafe/' target='_blank'>
                 <img src={LI} alt='logo' className='mx-1' style={{width: '20px'}}/>
               </Link>
             </div>

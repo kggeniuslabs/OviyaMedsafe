@@ -83,7 +83,7 @@ function Contactform() {
 
     if (!hasErrors) {
       try {
-        const response = await axios.post('http://160.153.172.25:5000/api/submit-form', formData);
+        const response = await axios.post('https://oviyamedsafe.com/api/submit-form', formData);
         if (response.status === 200) {
           toast.success('Message sent successfully!');
           setFormData({

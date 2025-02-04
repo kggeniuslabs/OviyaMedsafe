@@ -22,7 +22,7 @@ function Updateblog() {
     // Fetch existing blog details
     const fetchBlogData = async () => {
       try {
-        const response = await fetch(`http://160.153.172.25:5000/api/news/${id}`);
+        const response = await fetch(`https://oviyamedsafe.com/api/news/${id}`);
         if (response.ok) {
           const data = await response.json();
           setCategory(data.category_id);
@@ -56,7 +56,7 @@ function Updateblog() {
     }
     console.log(blogImage)
     try {
-      const response = await fetch(`http://160.153.172.25:5000/api/news/${id}`, {
+      const response = await fetch(`https://oviyamedsafe.com/api/news/${id}`, {
         method: 'PUT',
         body: formData,
       });
@@ -133,7 +133,7 @@ function Updateblog() {
           <div className="col-sm-10">
             {imagePath && (
               <img
-                src={`http://160.153.172.25:5000/uploads/${imagePath}`}
+                src={`https://oviyamedsafe.com/api/uploads/${imagePath}`}
                 alt="Blog"
                 style={{ maxWidth: '100%', marginBottom: '10px' }}
               />

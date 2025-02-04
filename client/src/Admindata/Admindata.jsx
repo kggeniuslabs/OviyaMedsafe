@@ -20,14 +20,14 @@ function Admindata() {
     const fetchData = async () => {
       try {
         
-        fetch("http://160.153.172.25:5000/api/leads")
+        fetch("https://oviyamedsafe.com/api/leads")
         .then(res=>res.json())
         .then(finaldata=>setGeneralLeads(finaldata))
-        fetch("http://160.153.172.25:5000/api/leadsdownload")
+        fetch("https://oviyamedsafe.com/api/leadsdownload")
         .then(res=>res.json())
         .then(finaldata=>setDownloadLeads(finaldata))
         // Fetch subscribe data
-        fetch("http://160.153.172.25:5000/api/subscribe")
+        fetch("https://oviyamedsafe.com/api/subscribe")
         .then(res=>res.json())
         .then(finaldata=>setSubscribedata(finaldata.subscriptions))
         

@@ -46,7 +46,7 @@ function Addblog() {
     formData.append('news_content', content);
   
     try {
-      const response = await fetch('http://160.153.172.25:5000/api/news', {
+      const response = await fetch('https://oviyamedsafe.com/api/news', {
         method: 'POST',
         body: formData, 
       });

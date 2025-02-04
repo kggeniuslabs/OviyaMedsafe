@@ -40,12 +40,15 @@ import SwiperCard3D from './Landingpage/Videopart/SwiperCard3D';
 import Banner from './Banner/Banner';
 import BlogsUserView from './Blog/Blogbanner/BlogsUserView';
 import Admindata from './Admindata/Admindata';
+import { HelmetProvider } from 'react-helmet-async';
+import Sitemap from './Sitemap/Sitemap';
 
 function App() {
 
 
   return (
     <>
+    <HelmetProvider>
     <BrowserRouter>
     <Routes>
       <Route path="/" element={ [<Contactpart/>,<Menubar/>,<Banner/>,<Aboutpage/>,<Philosophy/>,<OurServices/>,<Testimonial/>,<Blogbanner/>,<SwiperCard3D/>,<Footer/>,<Whatsapp/>]}/>
@@ -69,11 +72,12 @@ function App() {
       <Route path='/news/:id' element={[<Contactpart />,<Menubar />,<Adminview/>,<Footer/>,<Whatsapp />]} />
       <Route path="/downloads" element={[<Contactpart/>,<Menubar/>,<Downloads/>,<Footer/>,<Whatsapp/>]}/>
       <Route path="/admin" element={<Admindata/>}/>
-      <Route path='*'element={ [<Contactpart/>,<Menubar/>,<Banner/>,<Aboutpage/>,<Philosophy/>,<OurServices/>,<Testimonial/>,<Blogbanner/>,<SwiperCard3D/>,<Footer/>,<Whatsapp/>]}/>
+      <Route path="/sitemap"  element={[<Contactpart/>,<Menubar/>,<Sitemap/>,<Footer/>,<Whatsapp/>]}/>
+      {/* <Route path='*'element={ [<Contactpart/>,<Menubar/>,<Banner/>,<Aboutpage/>,<Philosophy/>,<OurServices/>,<Testimonial/>,<Blogbanner/>,<SwiperCard3D/>,<Footer/>,<Whatsapp/>]}/> */}
     </Routes>
 
     </BrowserRouter>
-
+    </HelmetProvider>
     </>
   )
 }

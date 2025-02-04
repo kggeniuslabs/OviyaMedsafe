@@ -21,7 +21,7 @@ function Footer() {
     }
 
     try {
-      const response = await fetch("http://160.153.172.25:5000/api/subscribe", {
+      const response = await fetch("https://oviyamedsafe.com/api/subscribe", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -56,7 +56,7 @@ const years=now.getFullYear()
                 Coimbatore – 641 025<br/>Tamil Nadu, India</p>
                 <h5 className='oviyafooter'>Oviya MedSafe UK Ltd</h5>
                 <p>Suite LP25393 <br/>
-                20-22, Wenlock Road, <br/>
+                20-22, Wenlock Road <br/>
                 London N1 7GU <br/>
                 United Kingdom</p>
               </div>
@@ -70,6 +70,7 @@ const years=now.getFullYear()
               <Link  to={"/careers"} className='text-decoration-none text-light'><p>Careers</p></Link>
               <Link to={"/contact"} className='text-decoration-none text-light'><p>Contact</p></Link>
               <Link to={"/disclaimer-and-privacy-policy"} className='text-decoration-none text-light'><p>Disclaimer & <br/> Privacy Policy</p></Link>
+              <Link to={"/sitemap"} className='text-decoration-none text-light'><p>Sitemap</p></Link>
               </div>
             <div className='col-sm-12 col-md-6 col-lg-3'>
               <h4 className='footerhead py-3'>Services</h4>
@@ -100,10 +101,10 @@ const years=now.getFullYear()
               <p className='text-decoration-none'><a href="tel:+44-20-3393-6037" className='text-light text-decoration-none'><img src={Phwhite} height={"20px"} className='pe-2'/>UK +44 20 3393 6037</a></p>
               </div>
                <div className='d-flex social-links py-5'>
-             <a href='https://www.facebook.com/OviyaMedSafe'><CiFacebook className='icon'/></a>
-                     <a href='https://x.com/OviyaMedSafe' > <FaXTwitter className='icon'/></a>
-                     <a href='https://www.youtube.com/channel/UCJMIsvtEWEP0NwUalnRgODQ/videos'><AiOutlineYoutube/></a>
-             <a href='https://www.linkedin.com/company/oviya-medsafe/'><CiLinkedin/></a>
+             <a href='https://www.facebook.com/OviyaMedSafe' target='blank'> <CiFacebook className='icon'/></a>
+                     <a href='https://x.com/OviyaMedSafe' target='blank' > <FaXTwitter className='icon'/></a>
+                     <a href='https://www.youtube.com/channel/UCJMIsvtEWEP0NwUalnRgODQ/videos' target='blank'><AiOutlineYoutube/></a>
+             <a href='https://www.linkedin.com/company/oviya-medsafe/' target='blank'><CiLinkedin/></a>
               </div>
               </div>  
         </div>

@@ -1,7 +1,7 @@
 import { servicesData } from "../utils/services/servicesData";
 import TOP from "../assets/services/topsvg.png";
 import BOTTOM from "../assets/services/bottomsvg.png";
-import './services.css'
+import './Services.css'
 
 
 const DynamicServices = ({ index }) => {
@@ -17,12 +17,12 @@ const DynamicServices = ({ index }) => {
           {servicesData[index]?.title}
         </h1>
         <p
-  className="main-text"
-  dangerouslySetInnerHTML={{
-    __html: servicesData[index]?.description,
-  }}
-  style={{ fontSize: "18px", lineHeight: "1.6", textAlign: "justify" }}
-></p>
+          className="main-text"
+          dangerouslySetInnerHTML={{
+            __html: servicesData[index]?.description,
+          }}
+          style={{ fontSize: "18px", lineHeight: "1.6", textAlign: "justify" }}
+        ></p>
       </div>
 
       {/* Image */}

@@ -6,7 +6,7 @@ import uklogo from "../assets/uk.png";
 import indlogo from "../assets/india.png";
 import { FaLocationDot } from "react-icons/fa6";
 import { HiPhone } from "react-icons/hi2";
-import { Helmet } from 'react-helmet';
+import { Helmet } from 'react-helmet-async';
 function Contact() {
 
   useEffect(() => {
@@ -19,6 +19,10 @@ function Contact() {
         <meta name="description" content="Reach out to Oviya MedSafe for expert pharmacovigilance consulting and drug safety services. Contact us to discuss your specific needs and how we can assist." />
         <meta name="keywords" content="contact Oviya MedSafe, get in touch, pharmacovigilance services, drug safety consulting, contact information" />
         <link rel="canonical" href="https://www.oviyamedsafe.com/contact" />
+        <meta property="og:title" content="Contact Oviya MedSafe | Get in Touch for Pharmacovigilance Services" />
+        <meta property="og:image" content="https://www.oviyamedsafe.com/mainlogo.png" />
+        <meta property="og:url" content="https://www.oviyamedsafe.com/" />
+        <meta property="og:type" content="website" />
       </Helmet>
         <div className='container'>
       <h1 className="text-center text-light subhead2 pt-3">Contact Us</h1>
@@ -56,8 +60,8 @@ function Contact() {
             <IoMdMail className="bg-light p-2 rounded-circle me-3 iconmail" />
             Email
           </h4>
-          <p className='ps-0 ps-md-5'>If you prefer the e-route, you can write to</p>
-          <p className='ps-0 ps-md-5'>
+          <p className='ps-3 ps-md-4 ps-lg-5 ms-4 ms-md-4 ms-lg-4' >If you prefer the e-route, you can write to</p>
+          <p className='ps-3 ps-md-4 ps-lg-5 ms-4 ms-md-4 ms-lg-4'>
             <a href="mailto:info@oviyamedsafe.com" style={{ textDecoration: 'none', color: 'inherit' }}>
               info@oviyamedsafe.com
             </a>
@@ -69,13 +73,13 @@ function Contact() {
             <HiPhone className="bg-light p-2 rounded-circle me-3 iconmail" />
             Phone
           </h4>
-          <p className="d-flex align-items-center ps-0 ps-md-5">
+          <p className="d-flex align-items-center ps-3 ps-md-5">
   <img src={indlogo} alt="India Logo" className="countrylogo me-2" />
   <a href="tel:+914223502276" className="text-decoration-none text-light">
     +91 422 3502276
   </a>
 </p>
-<p className="d-flex align-items-center ps-0 ps-md-5">
+<p className="d-flex align-items-center ps-3 ps-md-5">
   <img src={uklogo} alt="UK Logo" className="countrylogo me-2" />
   <a href="tel:+442033936037" className="text-decoration-none text-light">
     +44 20 3393 6037

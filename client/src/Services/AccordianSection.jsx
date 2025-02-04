@@ -3,7 +3,7 @@ import { accordianData } from "../utils/services/accordianData";
 import { FaPlus, FaMinus } from "react-icons/fa";
 import TOP from "../assets/services/topgraysvg.png";
 import BOTTOM from "../assets/services/bottomgraysvg.png";
-import './services.css';
+import './Services.css';
 
 
 const AccordianSection = ({ index }) => {
@@ -64,7 +64,7 @@ const AccordianSection = ({ index }) => {
                 <div
                     className={`ps-4 row overflow-hidden transition-all col-11`}
                     style={{
-                      maxHeight: isExpanded ? "500px" : "0",
+                      maxHeight: isExpanded ? "600px" : "0",
                       transition: "max-height 0.3s ease",
                     }}
                   >

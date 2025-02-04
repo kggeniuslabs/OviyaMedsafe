@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import "./Privacy.css";
-import { Helmet } from 'react-helmet';
+import { Helmet } from 'react-helmet-async';
 function Privact() {
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -12,6 +12,10 @@ function Privact() {
         <meta name="description" content="Read Oviya Medsafe's Disclaimer and Privacy Policy for detailed information on how we handle your data, privacy, and terms of use. Your security and trust are important to us." />
         <meta name="keywords" content="Oviya Medsafe, Disclaimer, Privacy Policy, Terms of Use, Data Protection, Privacy, Online Security, Medical Data Security, User Privacy, Oviya Medsafe Terms" />
         <link rel="canonical" href="https://www.oviyamedsafe.com/disclaimer-and-privacy-policy" />
+        <meta property="og:title" content="Disclaimer & Privacy Policy | Oviya Medsafe" />
+        <meta property="og:image" content="https://www.oviyamedsafe.com/mainlogo.png" />
+        <meta property="og:url" content="https://www.oviyamedsafe.com/" />
+        <meta property="og:type" content="website" />
       </Helmet>
         <h1 className='text-center py-3 subhead2'>Disclaimer</h1>
         <div className='row bgprivacy p-2 p-md-5'>

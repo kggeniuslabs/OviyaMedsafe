@@ -3,7 +3,7 @@ import { Link, useNavigate } from "react-router-dom";
 import "./Blogbanner.css";
 import { LiaCalendar } from "react-icons/lia";
 import { LuCircleUserRound } from "react-icons/lu";
-import { Helmet } from "react-helmet";
+import { Helmet } from "react-helmet-async";
 
 const BlogsUserView = () => {
   const [blogs, setBlogs] = useState([]); // State to hold blog data
@@ -16,7 +16,7 @@ const BlogsUserView = () => {
     window.scroll(0,0);
     const fetchCourses = async () => {
       try {
-        const response = await fetch("http://160.153.172.25:5000/api/news");
+        const response = await fetch("https://oviyamedsafe.com/api/news");
         if (response.ok) {
           const data = await response.json();
           // Sort blogs by date (most recent first)
@@ -28,10 +28,10 @@ const BlogsUserView = () => {
           );
           setBlogs(sortedBlogs); // Update the state with sorted blogs
         } else {
-          console.error("Failed to fetch courses");
+          console.error("Failed to fetch News");
         }
       } catch (error) {
-        console.error("An error occurred while fetching courses:", error);
+        console.error("An error occurred while fetching News:", error);
       }
     };
     fetchCourses();
@@ -44,6 +44,10 @@ const BlogsUserView = () => {
         <meta name="description" content="Stay updated with Oviya MedSafe’s latest news, industry events, and regulatory developments in pharmacovigilance, drug safety, and global compliance." />
         <meta name="keywords" content="Pharmacovigilance news, drug safety events, regulatory updates, Oviya MedSafe news, pharma industry conferences, drug safety compliance events, healthcare trends, case studies." />
         <link rel="canonical" href="https://www.oviyamedsafe.com/news" />
+        <meta property="og:title" content="Latest News & Events | Oviya MedSafe’s Updates on Drug Safety & Compliance" />
+        <meta property="og:image" content="https://www.oviyamedsafe.com/mainlogo.png" />
+        <meta property="og:url" content="https://www.oviyamedsafe.com/" />
+        <meta property="og:type" content="website" />
       </Helmet>
       <div className="row my-5 pb-5 insightspart">
         <h1 className="text-center subhead2 mb-5">News</h1>
@@ -58,7 +62,7 @@ const BlogsUserView = () => {
               <div key={blog.id} className="col-sm-12 col-lg-4 mb-2">
                 <div className="card colourcard mt-3 h-100 rounded-3">
                   <img
-                    src={`http://160.153.172.25:5000/uploads/${blog.image}`} // Use the correct image path here
+                    src={`https://oviyamedsafe.com/api/uploads/${blog.image}`} // Use the correct image path here
                     title={blog.news_title}
                     alt={blog.news_title} // Use title as alt text
                     className="card-img-top"

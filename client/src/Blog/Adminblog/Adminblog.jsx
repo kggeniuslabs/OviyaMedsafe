@@ -19,16 +19,16 @@ function Adminblog() {
     // Fetch all news from the backend
     const fetchCourses = async () => {
       try {
-        const response = await fetch('http://160.153.172.25:5000/api/news');
+        const response = await fetch('https://oviyamedsafe.com/api/news');
         if (response.ok) {
           const data = await response.json();
           setBlogs(data);
           setFilteredBlogs(data);
         } else {
-          setError('Failed to fetch courses');
+          setError('Failed to fetch News');
         }
       } catch (error) {
-        setError('An error occurred while fetching courses');
+        setError('An error occurred while fetching News');
       } 
     };
     fetchCourses();
@@ -37,7 +37,7 @@ function Adminblog() {
   //DELETE LOGIC
   const handleDeleteBlog = async (blogId) => {
     try {
-      const response = await fetch(`http://160.153.172.25:5000/api/news/${blogId}`, {
+      const response = await fetch(`https://oviyamedsafe.com/api/news/${blogId}`, {
         method: 'DELETE',
       });
 
@@ -46,14 +46,14 @@ function Adminblog() {
       if (response.ok) {
         setBlogs(blogs.filter((blog) => blog.id !== blogId));
         setFilteredBlogs(filteredBlogs.filter((blog) => blog.id !== blogId));
-        toast.success('Course deleted successfully.');
+        toast.success('News deleted successfully.');
       } else {
         const data = await response.json();
-        toast.error(data.message || 'Failed to delete course.');
+        toast.error(data.message || 'Failed to delete News.');
       }
     } catch (error) {
-      console.error('Error deleting course:', error);
-      toast.error('An error occurred while deleting the course.');
+      console.error('Error deleting News:', error);
+      toast.error('An error occurred while deleting the News.');
     }
   };
 console.log(blogs);
@@ -100,7 +100,7 @@ console.log(blogs);
 
 
     try {
-      const response = await fetch(`http://160.153.172.25:5000/api/news/${id}/publish`, {
+      const response = await fetch(`https://oviyamedsafe.com/api/news/${id}/publish`, {
         method: "PATCH",
         headers: {
           "Content-Type": "application/json",
@@ -179,7 +179,7 @@ console.log(blogs);
           <div key={blog.id} className="col-12 col-sm-6 col-lg-4 my-1">
             <div className="card shadowcard my-4 position-relative h-100">
               <img
-                src={`http://160.153.172.25:5000/uploads/${blog.image}`}
+                src={`https://oviyamedsafe.com/api/uploads/${blog.image}`}
                 alt={blog.news_title}
                 className="card-img-top p-0 m-0"
               />

@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react'
 import "./Careers.css"
-import { Helmet } from 'react-helmet';
+import { Helmet } from 'react-helmet-async';
 import { use } from 'react';
 function Careers() {
   useEffect(() => {
@@ -13,6 +13,10 @@ function Careers() {
         <meta name="description" content="Explore career opportunities at Oviya MedSafe and join our dedicated team of professionals in the field of Pharmacovigilance and drug safety services." />
         <meta name="keywords" content="careers, Oviya MedSafe jobs, Pharmacovigilance careers, drug safety employment, join our team" />
         <link rel="canonical" href="https://www.oviyamedsafe.com/careers" />
+        <meta property="og:title" content="Careers at Oviya MedSafe | Join Our Pharmacovigilance Team" />
+        <meta property="og:image" content="https://www.oviyamedsafe.com/mainlogo.png" />
+        <meta property="og:url" content="https://www.oviyamedsafe.com/" />
+        <meta property="og:type" content="website" />
       </Helmet>
        <div className='py-5'>
         <h1 className='text-light careershead pb-3'>Careers</h1>

@@ -96,7 +96,7 @@ body, html {
   padding: 0;
   width: 100%;
   overflow-x: hidden; 
-  user-select: none;
+  /* user-select: none; */
   font-family: 'Heebo', sans-serif;
 }
 

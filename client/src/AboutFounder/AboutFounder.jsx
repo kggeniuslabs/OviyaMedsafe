@@ -2,24 +2,28 @@ import React, { useEffect } from 'react'
 import research from '../assets/research.png';
 import './AboutFounder.css';
 import about1 from "../assets/ab2.png";
-import { Helmet } from 'react-helmet';
+import { Helmet } from 'react-helmet-async';
 function AboutFounder() {
   useEffect(()=>{
     window.scroll(0,0);
   },[])
   return (
   <>
-  <Helmet>
+                  <Helmet>
                     <title>About Oviya MedSafe | Leaders in Pharmacovigilance Consulting</title>
                     <meta name="description" content="Learn about Oviya MedSafe's mission to lead in pharmacovigilance consulting, offering comprehensive drug safety services with a commitment to regulatory compliance and client empowerment." />
                     <meta name="keywords" content="Oviya MedSafe, about us, pharmacovigilance consulting, drug safety services, regulatory compliance, client empowerment" />
                     <link rel="canonical" href="https://www.oviyamedsafe.com/about-us" />
+                    <meta property="og:title" content="About Oviya MedSafe | Leaders in Pharmacovigilance Consulting" />
+                    <meta property="og:image" content="https://www.oviyamedsafe.com/mainlogo.png" />
+                    <meta property="og:url" content="https://www.oviyamedsafe.com/" />
+                    <meta property="og:type" content="website" />
                   </Helmet>
     <div className='container-fluid abtparts'>
         <div className='row mx-1 mx-md-3 mx-lg-5 py-4'>
         <h1 className='subhead2 text-center py-2'>About Us</h1>
             <div className='col-sm-12 col-md-6 d-flex flex-column justify-content-center align-items-center px-3'>
-            <p className='textjust textst medsafepara'><span className='ovtxt'>Oviya MedSafe </span>provides comprehensive, end-to-end global Drug Safety support, including regulatory-compliant Drug Safety database access when required, to pharma/biotech manufacturers with established Pharmacovigilance systems. Additionally, Oviya MedSafe specializes in providing tailored consulting to emerging innovator companies and generic regulatory approval holders worldwide, helping them continuously enhance their Pharmacovigilance departments and ensure compliance with market-specific regulatory requirements.</p>
+            <p className='textjust textst medsafepara'><span className='subhead2'>Oviya MedSafe </span>provides comprehensive, end-to-end global Drug Safety support, including regulatory-compliant Drug Safety database access when required, to pharma/biotech manufacturers with established Pharmacovigilance systems. Additionally, Oviya MedSafe specializes in providing tailored consulting to emerging innovator companies and generic regulatory approval holders worldwide, helping them continuously enhance their Pharmacovigilance departments and ensure compliance with market-specific regulatory requirements.</p>
             </div>
             <div className='col-sm-12 col-md-6'>
                <img src={about1} className='about1img'/> 
