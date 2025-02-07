@@ -12,7 +12,3 @@ router.patch("/:id/publish", newsController.updatePublish);
 router.delete("/:id", newsController.deleteNews);
 
 module.exports = router;
-
-
-
-// 
