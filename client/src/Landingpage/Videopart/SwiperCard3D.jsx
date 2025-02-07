@@ -1,9 +1,8 @@
 import React, { useRef } from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
-import 'swiper/css/pagination';
-import 'swiper/css/autoplay';
-import { Pagination, Autoplay } from 'swiper/modules';
+import 'swiper/css/navigation';
+import { Navigation } from 'swiper/modules';
 
 export default function SwiperCard3D() {
   const videos = [
@@ -16,61 +15,54 @@ export default function SwiperCard3D() {
   ];
 
   const swiperRef = useRef(null);
+  const iframesRef = useRef([]);
 
-  const playFullscreen = (iframe) => {
+  const playFullscreen = (iframe, index) => {
+    iframesRef.current.forEach((frame, i) => {
+      if (frame && i !== index) {
+        frame.contentWindow.postMessage('{"event":"command","func":"pauseVideo","args":""}', '*');
+      }
+    });
+
     if (iframe.requestFullscreen) {
       iframe.requestFullscreen();
     } else if (iframe.mozRequestFullScreen) {
-      iframe.mozRequestFullScreen(); // Firefox
+      iframe.mozRequestFullScreen();
     } else if (iframe.webkitRequestFullscreen) {
-      iframe.webkitRequestFullscreen(); // Chrome, Safari, Opera
+      iframe.webkitRequestFullscreen();
     } else if (iframe.msRequestFullscreen) {
-      iframe.msRequestFullscreen(); // IE/Edge
+      iframe.msRequestFullscreen();
     }
   };
 
   return (
-    <div className="pb-5">
-      <h1 className="subhead2 py-3">Video Library</h1>
+    <div className="pb-5 relative">
+      <h1 className="subhead2 py-3 text-center">Video Library</h1>
       <Swiper
         onSwiper={(swiper) => (swiperRef.current = swiper)}
         spaceBetween={10}
-        pagination={{
-          clickable: true,
-        }}
-        autoplay={{
-          delay: 3500,
-          disableOnInteraction: false,
-        }}
         centeredSlides={false}
+        navigation={true}
         breakpoints={{
-          0: {
-            slidesPerView: 1,
-            spaceBetween: 0,
-          },
-          768: {
-            slidesPerView: 2,
-            spaceBetween: 15,
-          },
-          1024: {
-            slidesPerView: 3,
-            spaceBetween: 20,
-          },
+          0: { slidesPerView: 1, spaceBetween: 0 },
+          768: { slidesPerView: 2, spaceBetween: 15 },
+          1024: { slidesPerView: 3, spaceBetween: 20 },
         }}
-        modules={[Pagination, Autoplay]}
+        modules={[Navigation]}
         className="mySwiper"
       >
         {videos.map((video, index) => (
           <SwiperSlide key={index} className="swiper-slide-custom">
             <iframe
               className="responsive-iframe"
-              src={video}
+              src={`${video}&enablejsapi=1`}
               title={`Video ${index + 1}`}
               frameBorder="0"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
               referrerPolicy="strict-origin-when-cross-origin"
               allowFullScreen
-              onClick={(e) => playFullscreen(e.target)}
+              ref={(el) => (iframesRef.current[index] = el)}
+              onClick={(e) => playFullscreen(e.target, index)}
             ></iframe>
           </SwiperSlide>
         ))}
@@ -91,8 +83,27 @@ export default function SwiperCard3D() {
           border-radius: 8px;
         }
 
-        .swiper-pagination {
-          margin-top: 90px !important;
+        /* Custom Navigation Buttons */
+        .swiper-button-next,
+        .swiper-button-prev {
+          color: white !important;
+          background: rgba(0, 0, 0, 0.7);
+          padding: 15px;
+          border-radius: 50%;
+          transition: background 0.3s ease-in-out;
+          width: 50px;
+          height: 50px;
+        }
+
+        .swiper-button-next:hover,
+        .swiper-button-prev:hover {
+          background: rgba(0, 0, 0, 0.9);
+        }
+
+        .swiper-button-next::after,
+        .swiper-button-prev::after {
+          font-size: 20px;
+          font-weight: bold;
         }
       `}</style>
     </div>

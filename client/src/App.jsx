@@ -42,6 +42,7 @@ import BlogsUserView from './Blog/Blogbanner/BlogsUserView';
 import Admindata from './Admindata/Admindata';
 import { HelmetProvider } from 'react-helmet-async';
 import Sitemap from './Sitemap/Sitemap';
+import VideoCarousel from './Landingpage/Videopart/VideoCarousel';
 
 function App() {
 
@@ -51,7 +52,7 @@ function App() {
     <HelmetProvider>
     <BrowserRouter>
     <Routes>
-      <Route path="/" element={ [<Contactpart/>,<Menubar/>,<Banner/>,<Aboutpage/>,<Philosophy/>,<OurServices/>,<Testimonial/>,<Blogbanner/>,<SwiperCard3D/>,<Footer/>,<Whatsapp/>]}/>
+      <Route path="/" element={ [<Contactpart/>,<Menubar/>,<Banner/>,<Aboutpage/>,<Philosophy/>,<OurServices/>,<Testimonial/>,<Blogbanner/>,<SwiperCard3D />,<Footer/>,<Whatsapp/>]}/>
       <Route path='/services' element={[<Contactpart />,<Menubar />,<Footer />,<Whatsapp/>]}/>
       <Route path='/about-us' element={[<Contactpart/>,<Menubar/>,<AboutFounder/>,<Footer/>,<Whatsapp/>]}/>
       <Route path='/our-founder' element={[<Contactpart/>,<Menubar/>,<Founder/>,<Footer/>,<Whatsapp/>]}/>
