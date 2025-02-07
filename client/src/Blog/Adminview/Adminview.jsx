@@ -13,7 +13,7 @@ function Adminview() {
   const [relatedBlogs, setRelatedBlogs] = useState([]);
 const[email,setEmail]=useState("");
 
-// GET LOGIC
+// GET LOGIC FOR BLOGS
   useEffect(() => {
     window.scroll(0,0)
     // Fetch all news from the backend
@@ -80,6 +80,7 @@ const[email,setEmail]=useState("");
       toast.error("An error occurred. Please try again later."); // Handle fetch errors
     }
   };
+
 
   return (  
     <>
