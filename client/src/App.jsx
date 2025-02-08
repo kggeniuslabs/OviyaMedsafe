@@ -43,6 +43,7 @@ import Admindata from './Admindata/Admindata';
 import { HelmetProvider } from 'react-helmet-async';
 import Sitemap from './Sitemap/Sitemap';
 import VideoCarousel from './Landingpage/Videopart/VideoCarousel';
+import Search from './Landingpage/Menubar/Search';
 
 function App() {
 
@@ -63,6 +64,7 @@ function App() {
       <Route path='/pharmacovigilance-consulting' element={[<Contactpart/>,<Menubar/>,<Pharmacovigilance/>,<Footer/>,<Whatsapp/>]}/>
       <Route path='/strategic-partnerships' element={[<Contactpart/>,<Menubar/>,<Partnerships/>,<Footer/>,<Whatsapp/>]}/>
       <Route path='/careers' element={[<Contactpart/>,<Menubar/>,<Careers/>,<Careersdata/>,<Footer/>,<Whatsapp/>]} />
+      <Route path='/testww' element={<Search />} />
       <Route path="/updateblog/:id" element={<Updateblog/>}/>
       <Route path='/addblog' element={<Addblog/>}/>
       <Route path='/adminblog' element={<Adminblog/>}/>
