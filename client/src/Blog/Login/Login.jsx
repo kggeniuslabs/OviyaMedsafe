@@ -51,6 +51,9 @@ function Login() {
       email,
       password,
     }).then(response => {
+
+      localStorage.setItem("userRole", response.data.user.id); // Store role in localStorage
+      
       if(response.data.message==="Login successful"){
         if(response.data.user.id===1){
 

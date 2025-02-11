@@ -34,6 +34,7 @@ function Footer() {
       if (response.ok) {
         toast.success(data.message); // Display success message
         setEmail(""); // Clear the email input
+        window.location.reload(); // Refresh the page
       } else {
         toast.error(data.message || "Subscription failed."); // Display error message
       }

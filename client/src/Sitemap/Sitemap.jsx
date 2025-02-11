@@ -1,10 +1,12 @@
 import React, { useEffect } from 'react'
 import './Sitemap.css';
 import { Helmet } from 'react-helmet-async';
+
 const Sitemap = () => {
     useEffect(() => {
         window.scrollTo(0, 0);
     }, [])
+
   return (
     <div>
         <Helmet>

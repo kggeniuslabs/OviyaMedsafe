@@ -5,6 +5,7 @@ const authRoutes = require('./routes/authRoutes');
 const formRoutes = require('./routes/formRoutes');
 const newsRoutes = require("./routes/newsRoutes");
 const subscribeRoutes = require('./routes/subscribeRoutes');
+const videoRoutes = require('./routes/videoRoutes');
 const cors = require('cors');
 const db = require('./config/db');
 const path = require("path");
@@ -33,6 +34,7 @@ app.use('/api/',formRoutes);
 app.use("/uploads", express.static(path.join(__dirname, "uploads")));
 app.use("/api/news", newsRoutes);
 app.use('/api', subscribeRoutes);
+app.use('/api', videoRoutes)
 
 // Start Server and connect to MySQL
 db.query("SELECT 1")

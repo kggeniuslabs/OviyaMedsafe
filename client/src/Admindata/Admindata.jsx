@@ -14,9 +14,13 @@ function Admindata() {
   const [downloadLeads, setDownloadLeads] = useState([]);
   const [subscribedata, setSubscribedata] = useState([]);
   const [loading, setLoading] = useState(true);
-  const Navigate = useNavigate();
+  const userRole = localStorage.getItem("userRole");
+  const navigate = useNavigate();
 
   useEffect(() => {
+    if (userRole !== "2") {
+      navigate("/medsafelogin"); // Redirect if not an admin
+    }
     const fetchData = async () => {
       try {
         
@@ -38,7 +42,12 @@ function Admindata() {
       }
     };
     fetchData();
-  }, []);
+  }, [userRole, navigate]);
+
+  const handleLogout = () => {
+    localStorage.removeItem("userRole");
+    navigate("/");
+  };
 
   const handleCategoryClick = (category) => {
     setSelectedCategory(category);
@@ -90,18 +99,18 @@ function Admindata() {
           {["Contact", "Downloads", "Subscribe"].map((category) => (
            
             <Link
-    key={category}
-    to={category.toLowerCase()} // Matches the `id` of the target element
-    smooth={true}
-    className={`${
-      selectedCategory === category ? "active" : ""
-    } mb-2 mb-md-0 text-decoration-none text-dark fw-bold`}
-    onClick={() => handleCategoryClick(category)}
-  >
-    {category}
-  </Link>
+              key={category}
+              to={category.toLowerCase()} // Matches the `id` of the target element
+              smooth={true}
+              className={`${
+                selectedCategory === category ? "active" : ""
+              } mb-2 mb-md-0 text-decoration-none text-dark fw-bold`}
+              onClick={() => handleCategoryClick(category)}
+            >
+              {category}
+            </Link>
           ))}
-          <Link className="logouttxt" onClick={() => Navigate("/")}>
+          <Link className="logouttxt" onClick={handleLogout}>
             Logout
           </Link>
         </div>

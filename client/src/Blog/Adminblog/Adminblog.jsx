@@ -14,8 +14,14 @@ function Adminblog() {
   const navigate = useNavigate();
   const {id} = useParams();
 
+  const userRole = localStorage.getItem("userRole");
+
 // GET LOGIC
   useEffect(() => {
+
+    if (userRole !== "1") {
+      navigate("/medsafelogin"); // Redirect if not an admin
+    }
     // Fetch all news from the backend
     const fetchCourses = async () => {
       try {
@@ -32,7 +38,7 @@ function Adminblog() {
       } 
     };
     fetchCourses();
-  }, []);
+  }, [userRole, navigate]);
 
   //DELETE LOGIC
   const handleDeleteBlog = async (blogId) => {
@@ -81,7 +87,13 @@ console.log(blogs);
     }
   };
 
-  const handleAddBlogClick = () => navigate(`/addblog`);
+  const handleAddBlogClick = () => navigate(`/adminview/addblog`);
+  const handleAddVideoClick = () => navigate(`/adminview/addvideo`);
+
+  const handleLogout = () => {
+    localStorage.removeItem("userRole");
+    navigate("/");
+  };
 
   const handleUpdateClick = (blogId) => {
     navigate(`/updateblog/${blogId}`);
@@ -164,8 +176,15 @@ console.log(blogs);
             </button>
 
             <button
+              className="btn addbtn ms-3 mb-2 mb-md-0"
+              onClick={handleAddVideoClick}
+            >
+              <FaPlus /> Add Video
+            </button>
+
+            <button
               className="btn logoutbtn mb-2 mb-md-0 mx-3"
-              onClick={() => navigate("/")}
+              onClick={handleLogout}
             >
               <FaUserCircle style={{fontSize: "20px"}} className="mx-2" />
               Logout

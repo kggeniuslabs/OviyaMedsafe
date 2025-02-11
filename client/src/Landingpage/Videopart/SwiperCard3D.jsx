@@ -1,21 +1,41 @@
-import React, { useRef } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/navigation';
 import { Navigation } from 'swiper/modules';
 
+
+
 export default function SwiperCard3D() {
-  const videos = [
-    "https://www.youtube.com/embed/iifT9X6uIyA?rel=0&modestbranding=1&controls=1",
-    "https://www.youtube.com/embed/JKqM9XkZ17k?rel=0&modestbranding=1&controls=1",
-    "https://www.youtube.com/embed/dveQrSg4HQU?rel=0&modestbranding=1&controls=1",
-    "https://www.youtube.com/embed/jpneMtcNM5E?rel=0&modestbranding=1&controls=1",
-    "https://www.youtube.com/embed/R6lvatKwFMM?rel=0&modestbranding=1&controls=1",
-    "https://www.youtube.com/embed/-BhjTRU20dw?rel=0&modestbranding=1&controls=1",
-  ];
+  // const videos = [
+  //   "https://www.youtube.com/embed/iifT9X6uIyA?rel=0&modestbranding=1&controls=1",
+  //   "https://www.youtube.com/embed/JKqM9XkZ17k?rel=0&modestbranding=1&controls=1",
+  //   "https://www.youtube.com/embed/dveQrSg4HQU?rel=0&modestbranding=1&controls=1",
+  //   "https://www.youtube.com/embed/jpneMtcNM5E?rel=0&modestbranding=1&controls=1",
+  //   "https://www.youtube.com/embed/R6lvatKwFMM?rel=0&modestbranding=1&controls=1",
+  //   "https://www.youtube.com/embed/-BhjTRU20dw?rel=0&modestbranding=1&controls=1",
+  // ];
+
+  const [videos, setVideos] = useState([]);
 
   const swiperRef = useRef(null);
   const iframesRef = useRef([]);
+
+  const fetchVideos = async () => {
+    try {
+      const response = await fetch("https://oviyamedsafe.com/api/videos");
+      const finaldata = await response.json();
+      const filteredVideos = finaldata.videos.filter(video => video.publish === 1);
+      setVideos(filteredVideos.reverse()); // Display latest videos first
+    } catch (error) {
+      console.error("Error fetching data:", error);
+    }
+  };
+  
+  useEffect(() => {
+    fetchVideos();
+  }, []);
+
 
   const playFullscreen = (iframe, index) => {
     iframesRef.current.forEach((frame, i) => {
@@ -38,7 +58,7 @@ export default function SwiperCard3D() {
   return (
     <div className="pb-5 relative">
       <h1 className="subhead2 py-3 text-center">Video Library</h1>
-      <Swiper
+      {videos.length > 0 ?<Swiper
         onSwiper={(swiper) => (swiperRef.current = swiper)}
         spaceBetween={10}
         centeredSlides={false}
@@ -55,7 +75,7 @@ export default function SwiperCard3D() {
           <SwiperSlide key={index} className="swiper-slide-custom">
             <iframe
               className="responsive-iframe"
-              src={`${video}&enablejsapi=1`}
+              src={`${video.video}`}
               title={`Video ${index + 1}`}
               frameBorder="0"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
@@ -66,7 +86,7 @@ export default function SwiperCard3D() {
             ></iframe>
           </SwiperSlide>
         ))}
-      </Swiper>
+      </Swiper> : <p className="text-center">No videos available</p>}
 
       <style jsx>{`
         .swiper-slide-custom {

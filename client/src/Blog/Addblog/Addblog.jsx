@@ -14,8 +14,16 @@ function Addblog() {
   const [title, setTitle] = useState(""); // State for blog title
   const [shortTitle, setShortTitle] = useState("");
   const [image, setImage] = useState(null);
-  const [selectedDate,setSelectedDate]=useState("") 
+  const [selectedDate,setSelectedDate]=useState("")
+  const userRole = localStorage.getItem("userRole"); 
   const navigate = useNavigate();
+
+
+  useEffect(() => {
+      if (userRole !== "1") {
+        navigate("/medsafelogin"); // Redirect if not an admin
+      }
+    }, [userRole, navigate]);
 
 
   const modules = {

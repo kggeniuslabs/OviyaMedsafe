@@ -25,3 +25,23 @@ font-family: 'Heebo', sans-serif;
     background-color: var(--subhead2-color);
     color: white;
 }
+
+.bt-w {
+    width: 180px;
+}
+
+.btn-pub{
+    background-color: var(--subhead2-color);
+    color: white;
+}
+
+.btn-pub:hover{
+    background-color: #0D866F;
+    color: white;
+}
+
+@media (max-width: 768px) {
+    .bt-w {
+        width: 148px;
+    }
+}

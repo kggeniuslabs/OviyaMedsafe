@@ -44,6 +44,7 @@ import { HelmetProvider } from 'react-helmet-async';
 import Sitemap from './Sitemap/Sitemap';
 import VideoCarousel from './Landingpage/Videopart/VideoCarousel';
 import Search from './Landingpage/Menubar/Search';
+import AddVideo from './Blog/Addblog/AddVideo';
 
 function App() {
 
@@ -66,7 +67,7 @@ function App() {
       <Route path='/careers' element={[<Contactpart/>,<Menubar/>,<Careers/>,<Careersdata/>,<Footer/>,<Whatsapp/>]} />
       <Route path='/testww' element={<Search />} />
       <Route path="/updateblog/:id" element={<Updateblog/>}/>
-      <Route path='/addblog' element={<Addblog/>}/>
+      <Route path='/adminview/addblog' element={<Addblog/>}/>
       <Route path='/adminblog' element={<Adminblog/>}/>
       <Route path='/adminview' element={[<Contactpart/>,<Menubar/>,<Adminblog />]}/>
       <Route path="/disclaimer-and-privacy-policy" element={[<Contactpart/>,<Menubar/>,<Privact/>,<Footer/>,<Whatsapp/>]}/>
@@ -76,6 +77,7 @@ function App() {
       <Route path="/downloads" element={[<Contactpart/>,<Menubar/>,<Downloads/>,<Footer/>,<Whatsapp/>]}/>
       <Route path="/admin" element={<Admindata/>}/>
       <Route path="/sitemap"  element={[<Contactpart/>,<Menubar/>,<Sitemap/>,<Footer/>,<Whatsapp/>]}/>
+      <Route path="/adminview/addvideo" element={<AddVideo />} />
       {/* <Route path='*'element={ [<Contactpart/>,<Menubar/>,<Banner/>,<Aboutpage/>,<Philosophy/>,<OurServices/>,<Testimonial/>,<Blogbanner/>,<SwiperCard3D/>,<Footer/>,<Whatsapp/>]}/> */}
     </Routes>
 

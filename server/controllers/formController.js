@@ -41,6 +41,28 @@ const submitForm = async (req, res) => {
        `
       };
       await transporter.sendMail(mailOptions);
+    } 
+    else if (form_id === 2){
+      const subject = 'New Download request received!';
+      const mailOptions = {
+        from: process.env.EMAIL_USER,
+        to: `info@oviyamedsafe.com`,
+        subject: subject,
+        html: `
+          <div style="display: flex;flex-direction: row;justify-content: center;">
+            <div style="background-color: #17BE81;padding: 10px;border-radius: 10px;max-width: 500px;">
+              <p style="font-size: 20px;border-bottom:2px solid #fff"><b>Dear Admin, </b><p> 
+              <p>You have recevied a new download request from a client. Please find the details below:</p>
+              <p>Name: ${name}</p>
+              <p>Designation: ${designation}</p>
+              <p>Organization: ${organization}</p>
+              <p>Email: ${email}</p>
+              <p>Phone Number: ${phone_number}</p>
+            </div>
+          </div>
+       `
+      };
+      await transporter.sendMail(mailOptions);
     }
 
     return res.status(200).json({ message: 'Form submitted successfully', result });
