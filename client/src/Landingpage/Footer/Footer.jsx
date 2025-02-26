@@ -10,7 +10,8 @@ import "react-toastify/dist/ReactToastify.css";
 
 import "./Footer.css"
 function Footer() {
-
+  const [isDropdownOpen, setIsDropdownOpen] = useState(false);
+  const [isDropdownOpen1, setIsDropdownOpen1] = useState(false);
   const [email, setEmail] = useState("");
   // const [message, setMessage] = useState("");
 
@@ -64,8 +65,40 @@ const years=now.getFullYear()
             <div className='col-sm-12 col-md-6 col-lg-2'>
               <h5 className='footerhead py-3'>Explore</h5>
               <Link to={"/"} className='text-decoration-none text-light'><p>Home</p></Link>
-              <Link to={"/about-us"} className='text-decoration-none text-light'><p>Who we are</p></Link>
-              <Link to={"/drug-safety-services"} className='text-decoration-none text-light'><p>Services</p></Link>
+             
+              {/* Who We Are Dropdown */}
+            <div className="dropdown">
+              <p
+                className="m-0 p-0 btn dropdown-toggle text-light pb-3"
+                onClick={() => setIsDropdownOpen1(!isDropdownOpen1)}
+              >
+                Who we are
+              </p>
+              {isDropdownOpen1 && (
+                <div className="dropdown-menu show">
+                  <Link to="/about-us" className="dropdown-item">About Us</Link>
+                  <Link to="/our-founder" className="dropdown-item">Our Founder</Link>
+                  <Link to="/our-board" className="dropdown-item">Board Members</Link>
+                </div>
+              )}
+            </div>
+              <div className="col-sm-12 col-md-6 col-lg-3">
+            <div className="dropdown">
+              <p
+                className="m-0 p-0 btn dropdown-toggle text-light pb-3"
+                onClick={() => setIsDropdownOpen(!isDropdownOpen)}
+              >
+                Services
+              </p>
+              {isDropdownOpen && (
+                <div className="dropdown-menu show">
+                  <Link to="/drug-safety-services" className="dropdown-item">Drug Safety Services</Link>
+                  <Link to="/pharmacovigilance-consulting" className="dropdown-item">Pharmacovigilance Consulting</Link>
+                  <Link to="/strategic-partnerships" className="dropdown-item">Strategic Partnerships</Link>
+                </div>
+              )}
+            </div>
+          </div>
               <Link to={"/news"} className='text-decoration-none text-light'><p>News</p></Link>
               <Link to={"/downloads"}className='text-decoration-none text-light'><p>Downloads</p></Link>
               <Link  to={"/careers"} className='text-decoration-none text-light'><p>Careers</p></Link>

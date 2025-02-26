@@ -2,22 +2,12 @@ import React, { useEffect, useRef, useState } from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/navigation';
-import { Navigation } from 'swiper/modules';
-
-
+import 'swiper/css/autoplay';
+import { Navigation, Autoplay } from 'swiper/modules';
 
 export default function SwiperCard3D() {
-  // const videos = [
-  //   "https://www.youtube.com/embed/iifT9X6uIyA?rel=0&modestbranding=1&controls=1",
-  //   "https://www.youtube.com/embed/JKqM9XkZ17k?rel=0&modestbranding=1&controls=1",
-  //   "https://www.youtube.com/embed/dveQrSg4HQU?rel=0&modestbranding=1&controls=1",
-  //   "https://www.youtube.com/embed/jpneMtcNM5E?rel=0&modestbranding=1&controls=1",
-  //   "https://www.youtube.com/embed/R6lvatKwFMM?rel=0&modestbranding=1&controls=1",
-  //   "https://www.youtube.com/embed/-BhjTRU20dw?rel=0&modestbranding=1&controls=1",
-  // ];
 
   const [videos, setVideos] = useState([]);
-
   const swiperRef = useRef(null);
   const iframesRef = useRef([]);
 
@@ -36,8 +26,8 @@ export default function SwiperCard3D() {
     fetchVideos();
   }, []);
 
-
   const playFullscreen = (iframe, index) => {
+    swiperRef.current?.autoplay.stop();
     iframesRef.current.forEach((frame, i) => {
       if (frame && i !== index) {
         frame.contentWindow.postMessage('{"event":"command","func":"pauseVideo","args":""}', '*');
@@ -63,13 +53,16 @@ export default function SwiperCard3D() {
         spaceBetween={10}
         centeredSlides={false}
         navigation={true}
+        autoplay={{ delay: 2000, disableOnInteraction: false }}
         breakpoints={{
           0: { slidesPerView: 1, spaceBetween: 0 },
           768: { slidesPerView: 2, spaceBetween: 15 },
           1024: { slidesPerView: 3, spaceBetween: 20 },
         }}
-        modules={[Navigation]}
+        modules={[Navigation, Autoplay]}
         className="mySwiper"
+        onMouseEnter={() => swiperRef.current?.autoplay.stop()}
+        onMouseLeave={() => swiperRef.current?.autoplay.start()}
       >
         {videos.map((video, index) => (
           <SwiperSlide key={index} className="swiper-slide-custom">
@@ -83,6 +76,8 @@ export default function SwiperCard3D() {
               allowFullScreen
               ref={(el) => (iframesRef.current[index] = el)}
               onClick={(e) => playFullscreen(e.target, index)}
+              onMouseEnter={() => swiperRef.current?.autoplay.stop()}
+              onMouseLeave={() => swiperRef.current?.autoplay.start()}
             ></iframe>
           </SwiperSlide>
         ))}
@@ -101,6 +96,12 @@ export default function SwiperCard3D() {
           height: 250px;
           margin: 10px;
           border-radius: 8px;
+          transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+        }
+
+        .responsive-iframe:hover {
+          transform: scale(1.05);
+          box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
         }
 
         /* Custom Navigation Buttons */

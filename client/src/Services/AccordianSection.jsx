@@ -64,7 +64,7 @@ const AccordianSection = ({ index }) => {
                 <div
                     className={`ps-4 row overflow-hidden transition-all col-11`}
                     style={{
-                      maxHeight: isExpanded ? "600px" : "0",
+                      maxHeight: isExpanded ? "1000px" : "0",
                       transition: "max-height 0.3s ease",
                     }}
                   >

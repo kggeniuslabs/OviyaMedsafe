@@ -1,10 +1,13 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import founder1 from "../assets/bg1.png";
 import founder2 from "../assets/Facebg.png";
 import founder3 from "../assets/bg3.png";
 import "./AboutFounder.css";
 import { Helmet } from 'react-helmet-async';
 function BoardMembers() {
+  useEffect(()=>{
+    window.scroll(0,0)
+  })
   const boardMembers = [{
     name: 'Dr J Vijay Venkatraman',
     position: "Founder",
