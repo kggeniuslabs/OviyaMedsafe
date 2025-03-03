@@ -13,10 +13,10 @@ function Founder() {
 
     <div className="container-fluid abtparts">
       <Helmet>
-        <title>Founder of Oviya Medsafe | Visionary Leadership in Healthcare Safety</title>
-        <meta name="description" content="Discover the story behind our founder Dr J Vijay Venkatraman who is a Diabetologist, Drug Safety Physician and Entrepreneur, with 2 decades of experience.  Understand his vision for Oviya MedSafe and his commitment to advancing healthcare safety." />
-        <meta name="keywords" content="Oviya Medsafe Founder, Healthcare Leadership, Medical Data Protection, Founder Story, Healthcare Innovation, Visionary Leadership, Oviya Medsafe Team." />
-        <link rel="canonical" href="https://www.oviyamedsafe.com/our-founder" />
+        <title>Dr J Vijay Venkatraman | Founder & CEO of Oviya MedSafe | Global Pharmacovigilance Leader</title>
+        <meta name="description" content="Dr J Vijay Venkatraman, Founder & CEO of Oviya MedSafe, is a Diabetologist, Drug Safety Physician, and Pharmacovigilance expert with 25 years of experience. A Fellow of PIPA, UK, he has been instrumental in helping global pharma and biotech companies meet compliance requirements. A sought-after speaker, author, and thought leader, Dr Vijay actively contributes to the advancement of drug safety worldwide." />
+        <meta name="keywords" content="Dr J Vijay Venkatraman, Oviya MedSafe Founder, pharmacovigilance expert, drug safety leader, global pharmacovigilance, PIPA Fellow, regulatory compliance, pharmaceutical consulting, pharmacovigilance thought leader, medical entrepreneur, keynote speaker in drug safety." />
+        <link rel="canonical" href="https://oviyamedsafe.com/our-founder" />
         <meta property="og:title" content="Founder of Oviya Medsafe | Visionary Leadership in Healthcare Safety" />
         <meta property="og:image" content="https://www.oviyamedsafe.com/mainlogo.png" />
         <meta property="og:url" content="https://www.oviyamedsafe.com/" />
@@ -56,25 +56,44 @@ function Founder() {
           </div>
           <div className='row text-justify founderparas py-3 textjust'>
           <p>
-            Dr J Vijay Venkatraman is a Diabetologist, Drug Safety Physician and Entrepreneur, with 25 years of experience. He holds an MBA degree in Services Management. He is the first Indian to have been conferred the Fellowship of the Pharmaceutical Information & Pharmacovigilance Association (PIPA), United Kingdom.
+          Dr J Vijay Venkatraman is a Diabetologist, Drug Safety Physician, and 
+Entrepreneur with 25 years of broad-based experience in Clinical Medicine 
+and Drug Safety. He holds an MBA in Services Management and is the first 
+Indian to be conferred the Fellowship of the Pharmaceutical Information & 
+Pharmacovigilance Association (PIPA), UK.
           </p>
           <p>
-            Dr Vijay founded Oviya MedSafe, a global Pharmacovigilance consulting & Drug Safety services providing company incorporated in Coimbatore, India and London, UK, which has been fulfilling the compliance needs of the Pharmaceutical industry since 2012.
+          As the Founder & CEO of Oviya MedSafe, a global Pharmacovigilance 
+consulting and Drug Safety services organization incorporated in 
+Coimbatore, India, and London, UK, Dr Vijay has been helping 
+pharmaceutical and biotechnology companies fulfill compliance 
+requirements since 2012.
           </p>
           <p>
-            Dr Vijay has held the honorary position ‘Regional Editor, India’ of 
-            <i> Global Forum</i>, the official magazine of the Drug Information Association (DIA) since April 2017. He served as the Chairman of the Indian Medical Association (IMA) Headquarters’ Standing Committee for Pharmacovigilance for the year 2021. He was the Chair of the Pharmacovigilance Council of the Indian Society for Clinical Research (ISCR) since the inception of the council in April 2015 until 2019.
+          He has served as the Regional Editor (India) for Global Forum, one of 
+the official publications of the Drug Information Association (DIA), since 
+April 2017. Previously, he held key leadership roles, including Chairman of 
+the Indian Medical Association (IMA) Headquarters’ Standing Committee for 
+Pharmacovigilance (2021), Executive Committee Member of the Indian 
+Society for Clinical Research (ISCR), and Chair of ISCR’s Pharmacovigilance 
+Council from 2015 to 2019.
           </p>
           <p>
-            Dr Vijay has been an invited faculty in conferences around the world. He has numerous publications to his credit and has often been featured in the media. He is a member of several professional associations and is actively involved in promoting Pharmacovigilance awareness among all stakeholders of the discipline.
+          A sought-after speaker, Dr Vijay has been invited to deliver lectures at 
+international conferences and has contributed a chapter to a medical 
+textbook. In addition to his academic contributions, he has authored 
+numerous articles and whitepapers on pharmacovigilance, frequently 
+shared his perspectives through media features and interviews, and actively 
+promotes drug safety awareness among key stakeholders.
           </p>
           <p>
-            Dr Vijay is a recipient of many awards including the ‘Leadership Excellence Award’ and the ‘State Appreciation Award for Co-ordinating Academic Activities’ by the Indian Medical Association.
+          Dr Vijay has received multiple accolades, including the Leadership 
+Excellence Award and the State Appreciation Award for Coordinating 
+Academic Activities from the Indian Medical Association.
           </p>
         </div>
       </div>
       </div>
-  
   );
 }
 

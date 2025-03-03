@@ -10,10 +10,10 @@ const Pharmacovigilance = () => {
   return (
     <div>
       <Helmet>
-        <title>Pharmacovigilance Consulting | Proactive Drug Safety & Compliance Strategies</title>
-        <meta name="description" content="Oviya MedSafe’s Pharmacovigilance consulting services help pharmaceutical companies navigate regulatory complexities while ensuring patient safety and global compliance" />
-        <meta name="keywords" content="Pharmacovigilance consulting, Oviya MedSafe, regulatory compliance, drug safety outcomes, pharmaceutical consulting services" />
-        <link rel="canonical" href="https://www.oviyamedsafe.com/pharmacovigilance-consulting" />
+        <title>Pharmacovigilance Consulting | Expert Drug Safety & Regulatory Solutions </title>
+        <meta name="description" content="Oviya MedSafe’s pharmacovigilance consulting services support pharmaceutical companies in achieving global regulatory compliance, optimizing drug safety processes, and mitigating risks to ensure patient safety." />
+        <meta name="keywords" content="pharmacovigilance consulting, drug safety consulting, regulatory compliance, risk management, pharmaceutical consulting, global pharmacovigilance, safety signal detection, Oviya MedSafe" />
+        <link rel="canonical" href="https://oviyamedsafe.com/pharmacovigilance-consulting" />
         <meta property="og:title" content="Pharmacovigilance Consulting | Proactive Drug Safety & Compliance Strategies" />
         <meta property="og:image" content="https://www.oviyamedsafe.com/mainlogo.png" />
         <meta property="og:url" content="https://www.oviyamedsafe.com/" />

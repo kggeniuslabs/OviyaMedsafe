@@ -15,9 +15,9 @@ function Contact() {
   return (
     <div className="container-fluid m-0 contactpart contactfoot">
       <Helmet>
-        <title>Contact Oviya MedSafe | Get in Touch for Pharmacovigilance Services</title>
-        <meta name="description" content="Reach out to Oviya MedSafe for expert pharmacovigilance consulting and drug safety services. Contact us to discuss your specific needs and how we can assist." />
-        <meta name="keywords" content="contact Oviya MedSafe, get in touch, pharmacovigilance services, drug safety consulting, contact information" />
+        <title>Contact Oviya MedSafe | Partner with Experts in Drug Safety</title>
+        <meta name="description" content="Get in touch with Oviya MedSafe for expert pharmacovigilance consulting and drug safety solutions. Our team is ready to assist with regulatory compliance, risk management, and more." />
+        <meta name="keywords" content="contact Oviya MedSafe, pharmacovigilance consulting, drug safety solutions, regulatory compliance support, risk management services, global drug safety" />
         <link rel="canonical" href="https://www.oviyamedsafe.com/contact" />
         <meta property="og:title" content="Contact Oviya MedSafe | Get in Touch for Pharmacovigilance Services" />
         <meta property="og:image" content="https://www.oviyamedsafe.com/mainlogo.png" />

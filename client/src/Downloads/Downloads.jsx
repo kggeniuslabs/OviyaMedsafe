@@ -18,11 +18,10 @@ const Downloads = () => {
   return (
     <div className='container-fluid text-justify text-light'>
       <Helmet>
-        <title>Pharmacovigilance Resources | Download Oviya MedSafe’s Expert Insights
-        </title>
-        <meta name="description" content="Access a variety of Pharmacovigilance resources and publications by Oviya MedSafe, offering insights into drug safety practices and regulatory compliance." />
-        <meta name="keywords" content="downloads, Oviya MedSafe resources, Pharmacovigilance publications, drug safety insights, regulatory compliance materials" />
-        <link rel="canonical" href="https://www.oviyamedsafe.com/downloads" />
+        <title>Pharmacovigilance Resources | Expert Drug Safety Insights from Oviya MedSafe</title>
+        <meta name="description" content="Explore Oviya MedSafe’s exclusive pharmacovigilance resources, including whitepapers, publications, and compliance guides, designed to support global drug safety and regulatory excellence." />
+        <meta name="keywords" content="pharmacovigilance downloads, Oviya MedSafe resources, drug safety publications, regulatory compliance guides, pharmacovigilance whitepapers, global drug safety insights" />
+        <link rel="canonical" href="https://oviyamedsafe.com/downloads" />
         <meta property="og:title" content="Pharmacovigilance Resources | Download Oviya MedSafe’s Expert Insights" />
         <meta property="og:image" content="https://www.oviyamedsafe.com/mainlogo.png" />
         <meta property="og:url" content="https://www.oviyamedsafe.com/" />

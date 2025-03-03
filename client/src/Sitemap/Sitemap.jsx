@@ -16,19 +16,17 @@ const Sitemap = () => {
         <div className='sitemap-header'>
             <div className='container d-flex justify-content-between align-items-center pt-4'>
                 <div>
-                    <h1>Sitemap</h1>
+                    <h1 className='sitemaptext'>Sitemap</h1>
                 </div>
                 <div>
                     <a href="/" className='site-home'>
                         <h4>Home</h4>
-                    </a>
-                    
+                    </a>    
                 </div>
             </div>
-            
-            
         </div>
-        <div className='container'>
+        <div className='container-fluid stcontainer'>
+            <div className='ps-1 ps-md-5'>
             <ul className='site-list'>
                 <li><a href="/">Home</a></li>
                 <li><a href="/about-us">Who We Are</a></li>
@@ -51,6 +49,7 @@ const Sitemap = () => {
                 <li><a href="/sitemap">Sitemap</a></li>
             </ul>
         </div>
+    </div>
     </div>
   )
 }

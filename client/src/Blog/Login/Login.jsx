@@ -88,7 +88,7 @@ function Login() {
           className="text-center mb-4 loginhead py-2"
           style={{ fontSize: "1.5rem" }}
         >
-          Welcome to Oviya Medsafe
+          Welcome to Oviya MedSafe
         </h1>
         <form onSubmit={handleLogin}>
           <div className="mb-3">
