@@ -1,6 +1,4 @@
 import { Helmet } from 'react-helmet-async';
-
-
 import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import './Banner.css';
@@ -41,11 +39,11 @@ function Banner() {
   return (
     <div className='container-fluid bnpart p-0 m-0'>
       <Helmet>
-        <title>Welcome to Oviya MedSafe</title>
-        <meta name="description" content="Explore top-notch pharmacovigilance consulting services at Oviya MedSafe.Our services include regulatory compliance, medical writing, clinical data management, and strategic partnerships to ensure drug safety and efficacy. Partner with our expert team for quality pharmacovigilance services in Coimbatore and beyond." />
-        <meta name="keywords" content="pharmacovigilance consultancy, drug safety services, medical writing, clinical data management, regulatory compliance, Oviya MedSafe, pharmacovigilance consulting, strategic partnerships, pharmaceutical consulting, global drug safety, drug safety physician, pharmacovigilance scientist, pharmacovigilance consulting in coimbatore, drug safety service in coimbatore." />
+        <title>Oviya MedSafe | Global Pharmacovigilance Services & Expert Drug Safety Consulting</title>
+        <meta name="description" content="Oviya MedSafe is a trusted provider of end-to-end pharmacovigilance solutions, ensuring regulatory compliance and patient safety. We specialize in ICSR processing, aggregate report preparation, QPPV services, risk management, signal detection, and clinical trial safety. Additionally, through our strategic industry alliances, we offer complementary services such as PV database provision, medical writing, and regulatory affairs support. Trust our expert team for reliable, high-quality pharmacovigilance solutions tailored to your needs." />
+        <meta name="keywords" content="pharmacovigilance consulting, drug safety services, regulatory compliance, aggregate reporting, signal detection, clinical trial safety, QPPV services, risk management, strategic partnerships, PV database provision, medical writing, pharmaceutical consulting, global pharmacovigilance, drug safety physician, pharmacovigilance scientist, pharmacovigilance services in India, pharmacovigilance company in Coimbatore." />
         <meta name='author' author="Oviya MedSafe"/>
-        <link rel="canonical" href="https://www.oviyamedsafe.com/" />
+        <link rel="canonical" href="https://oviyamedsafe.com/"/>
         <meta property="og:title" content="Global Pharmacovigilance Consulting & Drug Safety Services | Oviya MedSafe" />
         <meta property="og:image" content="https://www.oviyamedsafe.com/mainlogo.png" />
         <meta property="og:url" content="https://www.oviyamedsafe.com/" />

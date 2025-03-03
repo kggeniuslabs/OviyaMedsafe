@@ -10,10 +10,10 @@ function AboutFounder() {
   return (
   <>
                   <Helmet>
-                    <title>About Oviya MedSafe | Leaders in Pharmacovigilance Consulting</title>
-                    <meta name="description" content="Learn about Oviya MedSafe's mission to lead in pharmacovigilance consulting, offering comprehensive drug safety services with a commitment to regulatory compliance and client empowerment." />
-                    <meta name="keywords" content="Oviya MedSafe, about us, pharmacovigilance consulting, drug safety services, regulatory compliance, client empowerment" />
-                    <link rel="canonical" href="https://www.oviyamedsafe.com/about-us" />
+                    <title>About Oviya MedSafe | Pioneers in Global Pharmacovigilance Consulting</title>
+                    <meta name="description" content="Discover Oviya MedSafe’s mission to lead global pharmacovigilance consulting. With expertise in drug safety, regulatory compliance, and strategic client partnerships, we are committed to ensuring high-quality safety solutions." />
+                    <meta name="keywords" content="Oviya MedSafe, about Oviya MedSafe, pharmacovigilance consulting, drug safety services, regulatory compliance, global drug safety, patient safety, pharmacovigilance experts, pharmaceutical consulting" />
+                    <link rel="canonical" href="https://oviyamedsafe.com/about-us" />
                     <meta property="og:title" content="About Oviya MedSafe | Leaders in Pharmacovigilance Consulting" />
                     <meta property="og:image" content="https://www.oviyamedsafe.com/mainlogo.png" />
                     <meta property="og:url" content="https://www.oviyamedsafe.com/" />

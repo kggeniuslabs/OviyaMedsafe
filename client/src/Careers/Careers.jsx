@@ -9,9 +9,9 @@ function Careers() {
   return (
     <div className='container-fluid contactpart text-center text-light'>
       <Helmet>
-        <title>Careers at Oviya MedSafe | Join Our Pharmacovigilance Team</title>
-        <meta name="description" content="Explore career opportunities at Oviya MedSafe and join our dedicated team of professionals in the field of Pharmacovigilance and drug safety services." />
-        <meta name="keywords" content="careers, Oviya MedSafe jobs, Pharmacovigilance careers, drug safety employment, join our team" />
+        <title>Careers at Oviya MedSafe | Build Your Future in Pharmacovigilance</title>
+        <meta name="description" content="Discover rewarding career opportunities at Oviya MedSafe. Join our expert team in pharmacovigilance and drug safety to make a meaningful impact in global healthcare." />
+        <meta name="keywords" content="Oviya MedSafe careers, pharmacovigilance jobs, drug safety employment, regulatory affairs careers, join Oviya MedSafe, global healthcare careers" />
         <link rel="canonical" href="https://www.oviyamedsafe.com/careers" />
         <meta property="og:title" content="Careers at Oviya MedSafe | Join Our Pharmacovigilance Team" />
         <meta property="og:image" content="https://www.oviyamedsafe.com/mainlogo.png" />

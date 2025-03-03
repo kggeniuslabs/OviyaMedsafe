@@ -11,10 +11,11 @@
 .site-list li {
     padding-top: 10px;
     align-items: center;
-    font-size: 22px;
-    
+    font-size: 22px;   
 }
-
+.sitemaptext{
+    color: var(--gradientfrom);
+}
 /* Remove hyperlink styles */
 .site-list li a {
     text-decoration: none;
@@ -46,7 +47,8 @@
 }
 
 .sitemap-header {
-    background-image: url('../assets/sitemap-bgf.jpg'); /* Replace with actual image path */
+    /* background-image: url('../assets/sitemap-bgf.jpg');  */
+    background: linear-gradient(45deg,white,#17BE81);
     background-size: cover;
     background-position: center;
     height: 100px;
@@ -55,9 +57,14 @@
 
 .site-home{
     text-decoration: none;
-    color: inherit; /* Keeps the text color same as parent */
+    color: inherit;
 }
 
 .site-home:hover{
     color: #66CC66;
+}
+
+.stcontainer{
+   background-image: url("../assets/Desktopbg.jpg");
+   
 }

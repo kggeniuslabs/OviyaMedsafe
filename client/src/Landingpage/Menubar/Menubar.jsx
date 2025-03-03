@@ -31,6 +31,7 @@ const Menubar = () => {
 
   return (
     <div className='menubar-container'>
+     
       {/* Desktop View */}
       <div
         className={`d-none d-xl-flex ${isSticky ? 'sticky' : ''}`}
@@ -42,14 +43,14 @@ const Menubar = () => {
         }}
       >
         <Link to="/">
-          <img src={LOGO} title='Oviya MedSafe company logo.' className='p-0 m-0' alt="Oviya MedSafe - Global Pharmacovigilance Consulting & Drug Safety Services" style={{height: "65px"}} />
+          <img src={LOGO} title='Oviya MedSafe company logo.' className='p-0 m-0 me-5' alt="Oviya MedSafe - Global Pharmacovigilance Consulting & Drug Safety Services" style={{height: "65px"}} />
         </Link>
         
         <Navbar />
         
-        <div className="d-flex align-items-center" style={{paddingRight: '28px'}}>
+        {/* <div className="d-flex align-items-center" style={{paddingRight: '28px'}}>
           <Search />
-        </div>
+        </div> */}
       </div>
 
       {/* Mobile View */}
@@ -93,9 +94,9 @@ const Menubar = () => {
       >
         <MobileNav setHamToggle={setHamToggle} />
 
-        <div className="d-flex align-items-center" style={{paddingLeft: '3rem', paddingBottom: '20px'}}>
+        {/* <div className="d-flex align-items-center" style={{paddingLeft: '3rem', paddingBottom: '20px'}}>
           <Search />
-        </div>
+        </div> */}
       </div>
     </div>
   );

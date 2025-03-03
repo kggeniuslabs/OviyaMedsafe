@@ -11,11 +11,10 @@ const DrugSafety = () => {
     <div >
       
       <Helmet>
-        <title>Drug Safety Services | Comprehensive Solutions for Regulatory Compliance
-        </title>
-        <meta name="description" content="Oviya MedSafe offers expert drug safety services, including safety monitoring, case processing, and post-market surveillance to help pharmaceutical firms maintain compliance." />
-        <meta name="keywords" content="drug safety services, Oviya MedSafe, safety reporting, clinical studies, post-marketing surveillance, pharmaceutical safety solutions" />
-        <link rel="canonical" href="https://www.oviyamedsafe.com/drug-safety-services/" />
+        <title>Drug Safety Services | End-to-End Pharmacovigilance & Regulatory Compliance</title>
+        <meta name="description" content="Oviya MedSafe provides comprehensive drug safety services, including case processing, risk management, aggregate reporting, and post-marketing surveillance, ensuring regulatory compliance and patient safety." />
+        <meta name="keywords" content="drug safety services, pharmacovigilance solutions, case processing, aggregate reporting, post-marketing surveillance, clinical safety, pharmaceutical risk management, regulatory compliance, Oviya MedSafe" />
+        <link rel="canonical" href="https://oviyamedsafe.com/drug-safety-services" />
         <meta property="og:title" content="Drug Safety Services | Comprehensive Solutions for Regulatory Compliance" />
         <meta property="og:image" content="https://www.oviyamedsafe.com/mainlogo.png" />
         <meta property="og:url" content="https://www.oviyamedsafe.com/" />

@@ -17,7 +17,7 @@ const Navbar = () => {
         <div className='d-flex align-items-center gap-4'>
             <Link
                 to="/"
-                className={`custom-link text-white ${isActive('/') ? 'active' : ''}`} >
+                className={`mx-2 custom-link text-white ${isActive('/') ? 'active' : ''}`} >
                 HOME
             </Link>
 
@@ -74,7 +74,7 @@ const Navbar = () => {
             >
                 <Link
                     to="#"
-                    className="custom-link2 text-white d-flex align-items-center gap-1"
+                    className="mx-2 custom-link2 text-white d-flex align-items-center gap-1"
                 >
                     <span className={`custom-link ${isActive('/drug-safety-services') ||isActive('/pharmacovigilance-consulting') || isActive('/strategic-partnerships')  ? 'active' : ''}`}>SERVICES</span> <span><IoMdArrowDropdown /></span>
                 </Link>
@@ -82,7 +82,7 @@ const Navbar = () => {
                 {/* Dropdown Menu */}
                 {activeDropdown === 'dropdown2' && (
                     <div
-                        className="dropdown-menu show"
+                        className="dropdown-menu show mx-2"
                         style={{
                             position: "absolute",
                             left: "0",
@@ -117,25 +117,25 @@ const Navbar = () => {
 
             <Link
                 to="/news"
-                className={`custom-link text-white ${isActive('/news') ? 'active' : ''}`}
+                className={`mx-2 custom-link text-white ${isActive('/news') ? 'active' : ''}`}
             >
                 NEWS
             </Link>
             <Link
                 to="/downloads"
-                className={`custom-link text-white ${isActive('/downloads') ? 'active' : ''}`}
+                className={`mx-2 custom-link text-white ${isActive('/downloads') ? 'active' : ''}`}
             >
                 DOWNLOADS
             </Link>
             <Link
                 to="/careers"
-                className={`custom-link text-white ${isActive('/careers') ? 'active' : ''}`}
+                className={`mx-2 custom-link text-white ${isActive('/careers') ? 'active' : ''}`}
             >
                 CAREERS
             </Link>
             <Link
                 to="/contact"
-                className={`custom-link text-white ${isActive('/contact') ? 'active' : ''}`}
+                className={`me-5 custom-link text-white ${isActive('/contact') ? 'active' : ''}`}
             >
                 CONTACT
             </Link>

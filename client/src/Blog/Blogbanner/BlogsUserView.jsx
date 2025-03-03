@@ -40,10 +40,10 @@ const BlogsUserView = () => {
   return (
     <div className="container-fluid" id="blogs">
       <Helmet>
-        <title>Latest News & Events | Oviya MedSafe’s Updates on Drug Safety & Compliance</title>
-        <meta name="description" content="Stay updated with Oviya MedSafe’s latest news, industry events, and regulatory developments in pharmacovigilance, drug safety, and global compliance." />
-        <meta name="keywords" content="Pharmacovigilance news, drug safety events, regulatory updates, Oviya MedSafe news, pharma industry conferences, drug safety compliance events, healthcare trends, case studies." />
-        <link rel="canonical" href="https://www.oviyamedsafe.com/news" />
+        <title>Latest News & Events | Oviya MedSafe’s Insights on Drug Safety & Compliance</title>
+        <meta name="description" content="Stay informed with Oviya MedSafe’s latest updates, industry events, and regulatory advancements in pharmacovigilance, drug safety, and global healthcare compliance." />
+        <meta name="keywords" content="pharmacovigilance news, drug safety events, regulatory advancements, Oviya MedSafe updates, pharma industry insights, global compliance trends, drug safety case studies, healthcare innovations" />
+        <link rel="canonical" href="https://oviyamedsafe.com/news" />
         <meta property="og:title" content="Latest News & Events | Oviya MedSafe’s Updates on Drug Safety & Compliance" />
         <meta property="og:image" content="https://www.oviyamedsafe.com/mainlogo.png" />
         <meta property="og:url" content="https://www.oviyamedsafe.com/" />

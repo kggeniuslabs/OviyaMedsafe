@@ -29,10 +29,10 @@ function BoardMembers() {
   return (
     <div className='container-fluid p-0 m-0 founderpart'>
       <Helmet>
-                    <title>Oviya Medsafe Board of Directors | Experts in Healthcare and Data Security</title>
-                    <meta name="description" content="Meet the board of directors at Oviya Medsafe. Our team of experts brings years of experience in healthcare, data security, and innovation to guide our mission in improving healthcare safety." />
-                    <meta name="keywords" content="Oviya Medsafe Board, Healthcare Experts, Board of Directors, Medical Data Security, Healthcare Innovation, Data Security Leaders, Oviya Medsafe Leadership Team" />
-                    <link rel="canonical" href="https://www.oviyamedsafe.com/our-board" />
+                    <title>Oviya MedSafe Board of Directors | Leaders in Drug Safety & Healthcare Innovation</title>
+                    <meta name="description" content="Get to know the Board of Directors at Oviya MedSafe, a team of seasoned experts in pharmacovigilance, healthcare, and technology. With decades of experience in drug safety, data security, and regulatory compliance, they provide strategic direction to advance global healthcare innovation" />
+                    <meta name="keywords" content="Oviya MedSafe Board, Board of Directors, drug safety experts, pharmacovigilance leadership, healthcare innovation, regulatory compliance, medicinal product safety, strategic healthcare leadership, global pharmacovigilance, physician entrepreneurs" />
+                    <link rel="canonical" href="https://oviyamedsafe.com/our-board " /> 
                     <meta property="og:title" content="Oviya Medsafe Board of Directors | Experts in Healthcare and Data Security" />
                     <meta property="og:image" content="https://www.oviyamedsafe.com/mainlogo.png" />
                     <meta property="og:url" content="https://www.oviyamedsafe.com/" />
